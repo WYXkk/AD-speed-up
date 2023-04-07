@@ -214,7 +214,7 @@ function canBuyDilationStudy(name) {
       if(ECTimesCompleted("eterc11") >= 5 && ECTimesCompleted("eterc12") >= 5 && player.timestudy.amcost.log10() / 20000 + player.timestudy.ipcost.log10() / 100 + player.timestudy.epcost.log2() >= 13000) return true
       else return false
     if(name==6)
-      if(player.eternityPoints.gte(new Decimal('1e4100'))) return true
+      if(player.eternityPoints.gte(new Decimal('1e4400'))) return true
       else return false
     if (player.dilation.studies.includes(name-1) && player.timestudy.theorem >= parseInt(document.getElementById("dilstudy"+name).textContent.split("花费: ")[1].replace(/[, ]+/g, ""))) return true
     else return false
@@ -410,7 +410,7 @@ function studyTreeSaveButton(num) {
 }
 
 finalCheck=()=>{
-    if(player.eternityPoints.gte(new Decimal('1e4500'))){
+    if(player.eternityPoints.gte(new Decimal('1e4400'))){
         alert('这里有 5 个问题. 你可以再按一次这个按钮来重新阅读.')
         alert('1. 第一个第八维度需要多少反物质？\n注意是第一个而不是前 10 个.\n回答 e 后面的数，例如如果答案是 1e13 那么回答 13.')
         alert('2. 购买所有 16 个无限升级需要多少无限点数？\n不包括可以重复购买的倍增升级, 12 个打破无限升级和复制器升级.')
